@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SectionContainer from "../components/sectionContainer/SectionContainer.astro";
+import ExperienceArticle from "../components/experience/Experience.astro";
+import TrabajosIcon from "../components/icons/Trabajos.astro"
+---
+
+<Layout 
+title="Experiencia laboral"
+description="he trabajado... " >
+
+<SectionContainer id="experiencia" class="py-24" >
+    <h2 class="flex gap-3 items-center text-2xl font-semibold mb-6">
+        <TrabajosIcon />
+        Formacion laboral
+    </h2>
+    <ExperienceArticle />
+</SectionContainer>
+
+</Layout>

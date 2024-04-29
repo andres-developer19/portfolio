@@ -1,0 +1,16 @@
+---
+interface Props {
+    question: string,
+    answer: string,
+    classDetails: string,
+    classSummary: string,
+    classBody: string,
+}
+
+const { question, answer, classDetails, classSummary, classBody } = Astro.props
+---
+
+<details class={classDetails}>
+    <summary class=`${classSummary} flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3` >{question}</summary>
+    <p class=`${classBody} mb-2 text-gray-500 dark:text-gray-400 p-5`>{answer}</p>
+</details>

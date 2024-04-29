@@ -1,0 +1,22 @@
+---
+import ContactosIcon from "../components/icons/Contactos.astro"
+import SectionContainer from "../components/sectionContainer/SectionContainer.astro"
+import Contact from "../components/contactos/Contactos.astro"
+import Layout from "../layouts/Layout.astro";
+import CarouselLogos from '../components/carouselLogos/CarouselLogos.astro'
+---
+
+<Layout 
+title="Experiencia laboral"
+description="he trabajado... " >
+
+<SectionContainer id="experiencia" class="pb-12 pt-12" >
+    <h2 class="flex gap-3 items-center text-2xl font-semibold mb-10">
+        <ContactosIcon />
+        Contactos
+    </h2>
+    <Contact />
+</SectionContainer>
+
+
+</Layout>

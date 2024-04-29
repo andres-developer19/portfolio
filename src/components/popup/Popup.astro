@@ -1,0 +1,19 @@
+---
+interface Props {
+    id: string
+    paragraph: string
+    open: boolean
+}
+
+const { id, paragrph, open } = Astro.props
+
+const idPopup = document.querySelector(`#${id}`)
+
+idPopup.addEventListener("click", () => {
+
+})
+---
+
+<dialog id={id} {!open ? close : open} >
+    <p>{paragraph}</p>
+  </dialog>

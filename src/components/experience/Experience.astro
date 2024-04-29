@@ -1,0 +1,56 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCE = [
+  {
+    date: "Actualmente...",
+    title: "Desarrollador Web - Happy Agencies",
+    description:
+      "Actualmente, desempeño el rol de desarrollador web en Happy Agencies, donde he tenido la oportunidad de aplicar y mejorar las habilidades adquiridas en mi formación previa. Mi responsabilidad principal es la implementación y resolución de páginas web, mayormente utilizando tecnologías como WordPress y HubSpot.",
+  },
+  {
+    date: "Junio 2022",
+    title: "React - Coderhouse",
+    description:
+      "Durante el curso, exploré las capacidades de este potente framework para construir interfaces de usuario dinámicas y eficientes. Además, amplié mi perspectiva al realizar un curso adicional en Vue.js",
+    link: "https://www.coderhouse.com/certificados/62d0ee65b6cc810019af3bc9?lang=es"
+  },
+  {
+    date: "Mayo 2022",
+    title: "Javascript - Coderhouse",
+    description:
+      "Durante la pandemia, decidí aprovechar el tiempo y retomé mis estudios en informática. Esta decisión me permitió profundizar en la rama del desarrollo web",
+    link: "https://www.coderhouse.com/certificados/628e54bdc46dd20019809d27?lang=es"
+    },
+  {
+    date: "Marzo 2022",
+    title: "Desarrollo Web - Coderhouse",
+    description:
+      "He adquirido habilidades sólidas en desarrollo web. Aprendí a manejar HTML y exploré sus conceptos fundamentales, como el modelo de caja, flexbox, grid y también utilicé preprocesadores como SASS para optimizar mi flujo de trabajo en CSS. Estas herramientas me han proporcionado una base robusta para crear sitios web eficientes y visualmente atractivos.",
+    link: "https://www.coderhouse.com/certificados/623dc8bce37bc0001ae97155?lang=es"
+  },
+    {
+    date: "Julio 2020",
+    title: "FreeCodeCamp",
+    description:
+      "Durante la pandemia, decidí aprovechar el tiempo y retomé mis estudios en informática. Esta decisión me permitió profundizar en la rama del desarrollo web",
+    link: "https://freecodecamp.org/espanol/certification/andres19_fc/javascript-algorithms-and-data-structures"
+  },
+  {
+    date: "Julio 2013",
+    title: "Tsu en informatica",
+    description:
+      "Obtuve mi título de Técnico Superior Universitario (TSU) en Informática, lo que me proporcionó una sólida formación en las áreas clave de la tecnología y la informática.",
+  }
+]
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700"> 
+{
+    EXPERIENCE.map(experience => (
+  <li class="mb-10 ms-4">
+    <ExperienceItem {...experience} />
+  </li>
+  )) 
+}            
+</ol>

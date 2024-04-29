@@ -1,0 +1,123 @@
+---
+import AboutMe from '../components/aboutMe/AboutMe.astro'
+import AboutMeIcon from '../components/icons/About.astro'
+import Badge from '../components/badge/Badge.astro'
+import CodeIcon from '../components/icons/Code.astro'
+import ContactosIcon from '../components/icons/Contactos.astro'
+import Contact from '../components/contactos/Contactos.astro'
+import Experience from '../components/experience/Experience.astro'
+import Layout from '../layouts/Layout.astro'
+import GithubIcon from '../components/icons/Github.astro'
+import LikedinIcon from '../components/icons/Linkedin.astro'
+import SocialPill from '../components/socialPill/SocialPill.astro'
+import YoutubeIcon from '../components/icons/Youtube.astro'
+import MailIcon from '../components/icons/Mail.astro'
+import Projects from '../components/projects/Projects.astro'
+import SectionContainer from '../components/sectionContainer/SectionContainer.astro'
+import TrabajosIcon from '../components/icons/Trabajos.astro'
+import AccordionBox from '../components/accordion/Accordion.astro'
+import Popup from '../components/popup/Popup.astro'
+
+---
+
+<Layout 
+title="Portfolio - Andres GTZ | Desarrollador y Programador web"
+description="Desarrollador y Programador web"
+>
+	<main class="px-4">
+		<!-- <Popup id="asd" paragraph="asdqwerty" open="true" /> -->	
+		<SectionContainer id="about" class="flex-column justify-center items-center w-full lg:w-[740px] mx-auto py-32 pb-24">
+
+			<img 
+				class="rounded-full size-12 mb-4" 
+				src="https://22529421.fs1.hubspotusercontent-na1.net/hubfs/22529421/foto.png" 
+				alt="foto de perfil">
+			<h1 class="text-white text-2xl md:text-3xl lg:text-5xl font-bold flex justify-start flex-row gap-x-4 pb-4">
+				Hola, soy Andres 
+				<div class="flex justify-center items-end">
+					<a 
+					href="https://www.linkedin.com/in/andres-gutierrez-developer/" 
+					target="_blank" 
+					rel=noopener"
+					class="flex justify-center items-center">
+					<Badge>
+						Contáctame
+					</Badge></a>
+				</div>
+			</h1>
+			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
+				Desarrollador web  
+				<span class="text-yellow-200/90">
+					+3años de experiencia.
+				</span> 
+				soy un profesional venezolano actualmente radicado en Buenos Aires, Argentina. Poseo habilidades sólidas en la creación de páginas web, utilizando tecnologías que incluyen
+				<span class="text-blue-200/90">
+					HTML, CSS, JavaScript, HubL, WordPress, entre otras.
+				</span>
+			</h2>
+				<nav class="flex justify-center md:justify-start gap-4 mt-4 flex-wrap">
+					<SocialPill	href="https://www.linkedin.com/in/andres-gutierrez-developer/" >
+						<LikedinIcon 
+						class="size-4 lg:size-5"
+						/>
+					Linkedin
+					</SocialPill>
+					<SocialPill
+					href="https://github.com/andres-developer19" 
+					>
+					<GithubIcon 
+					class="size-4 lg:size-5" />
+					GitHub
+					</SocialPill>
+					<SocialPill
+					href="https://www.youtube.com/channel/UCdIVB3zxbDrpupL-vnzsfCw" 
+					>
+					<YoutubeIcon 
+					class="size-4 lg:size-5" />
+					YouTube
+					</SocialPill>
+					<SocialPill
+					href="mailto:andres.developer19@gmail.com" 
+					>
+					<MailIcon 
+					class="size-4 lg:size-5" />					
+					Gmail
+					</SocialPill>
+				</nav>
+
+
+		</SectionContainer>
+		<!-- <SectionContainer id="experiencia" >
+			<h2 class="flex gap-3 items-center text-2xl font-semibold mb-6">
+				<TrabajosIcon />
+				Formacion laboral
+			</h2>
+			<Experience />
+		</SectionContainer>
+		<SectionContainer id="projects" >
+			<h2 class="flex gap-3 items-center text-2xl font-semibold mb-6">
+				<CodeIcon />
+				Proyectos
+			</h2>
+			<Projects />
+		</SectionContainer>
+		<SectionContainer id="aboutMe" >
+			<h2 class="flex gap-3 items-center text-2xl font-semibold mb-6">
+				<AboutMeIcon />
+				Sobre mi
+			</h2>
+			<AboutMe />
+		</SectionContainer>
+		<SectionContainer id="experiencia" class="py-24" >
+			<h2 class="flex gap-3 items-center text-2xl font-semibold mb-10">
+				<ContactosIcon />
+				Contactos
+			</h2>
+			<Contact />
+		</SectionContainer> -->
+	</main>
+</Layout>
+
+<style>
+	
+</style>

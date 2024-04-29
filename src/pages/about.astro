@@ -1,0 +1,25 @@
+---
+import AboutMe from "../components/aboutMe/AboutMe.astro"
+import AboutMeIcon from "../components/icons/About.astro"
+import Layout from "../layouts/Layout.astro";
+import SectionContainer from "../components/sectionContainer/SectionContainer.astro"
+import CarouselLogos from "../components/carouselLogos/CarouselLogos.astro";
+---
+
+<Layout 
+title="Andres Gutierrez - sobre mi  "
+description="he trabajado... " >
+
+<SectionContainer id="aboutMe" class="py-24" >
+    <h2 class="flex gap-3 items-center text-2xl font-semibold mb-6">
+        <AboutMeIcon />
+        Sobre mi
+    </h2>
+    <AboutMe />
+</SectionContainer>
+
+<SectionContainer class="pb-12 pt-12" >
+    <CarouselLogos />
+</SectionContainer>
+
+</Layout>

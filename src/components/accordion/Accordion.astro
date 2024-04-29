@@ -1,0 +1,35 @@
+---
+import AccordionItem from './AccordionItems.astro'
+
+const FAQS = [
+    {
+        question: "asklj asjmfl a",
+        answer: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore laborum, exercitationem commodi repellat harum impedit praesentium dolores obcaecati nesciunt nulla, fuga distinctio repudiandae enim velit ullam. Unde quas aspernatur expedita, est eius totam provident!",
+        classDetails: "flex",
+        classSummary: "flex",
+        classBody: "flex"
+    },
+    {
+        question: "asklj asjmfl a",
+        answer: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore laborum, exercitationem commodi repellat harum impedit praesentium dolores obcaecati nesciunt nulla, fuga distinctio repudiandae enim velit ullam. Unde quas aspernatur expedita, est eius totam provident!",
+        classDetails: "flex",
+        classSummary: "flex",
+        classBody: "flex"
+    },
+    {
+        question: "asklj asjmfl a",
+        answer: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore laborum, exercitationem commodi repellat harum impedit praesentium dolores obcaecati nesciunt nulla, fuga distinctio repudiandae enim velit ullam. Unde quas aspernatur expedita, est eius totam provident!",
+        classDetails: "flex",
+        classSummary: "flex",
+        classBody: "flex"
+    }
+]
+---
+
+<section>
+    {
+        FAQS.map(faq => (
+            <AccordionItem {...faq} />
+        ))
+    }
+</section>

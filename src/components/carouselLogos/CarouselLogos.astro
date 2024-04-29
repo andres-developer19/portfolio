@@ -1,0 +1,105 @@
+--- 
+import AstroIcon from '../icons/Astro.astro';
+import Css from '../icons/Css.astro';
+import Github from '../icons/Github.astro';
+import Html from '../icons/Html.astro';
+import Javascript from '../icons/Javascript.astro';
+import NextJS from '../icons/NextJS.astro';
+import React from '../icons/React.astro';
+import Tailwind from '../icons/Tailwind.astro';
+import Vue from '../icons/Vue.astro';
+import Wordpress from '../icons/Wordpress.astro';
+import Hubspot from '../icons/Hubspot.astro';
+
+
+
+
+
+
+
+const LOGOS = {
+  NEXT: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: NextJS,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+  JAVASCRIPT: {
+    name: "Javascript",
+    class: "bg-[#FBFF00] text-black",
+    icon: Javascript,
+  },
+  HTML: {
+    name: "HTML5",
+    class: "bg-[#003159] text-white",
+    icon: Html,
+  },
+  CSS: {
+    name: "css3",
+    class: "bg-[#003159] text-white",
+    icon: Css,
+  },
+  WORDPRESS: {
+    name: "Wordpress",
+    class: "bg-[#003159] text-white",
+    icon: Wordpress,
+  }
+}
+
+const ITEMS = [
+  {
+    logo: Css
+  },
+  {
+    logo: Html
+  },
+  {
+    logo: Javascript
+  },
+  {
+    logo: Wordpress
+  },
+  {
+    logo: Tailwind
+  },
+  {
+    logo: React
+  },
+  {
+    logo: Vue
+  },
+  {
+    logo: AstroIcon
+  },
+  {
+    logo: Github
+  },
+  {
+    logo: Hubspot
+  }
+]
+---
+
+<div class="">
+<div id="controls-carousel" class="swiper-wrapper relative w-full" data-carousel="static">
+  <!-- Carousel wrapper -->
+  <div class="flex justify-center items-center gap-12 overflow-x-auto px-10">
+
+    {
+      ITEMS.map(item => (
+        
+          <item.logo class="swiper-slide size-20 lg:size-30" />
+        
+      ))
+    } 
+    </Swiper>   
+  </div>
+</div>
+</div>
+
+
+
