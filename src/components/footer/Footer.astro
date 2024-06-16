@@ -31,9 +31,48 @@ const currentYear = new Date().getFullYear()
 
 
 <style  is:global>
-.footer {
-    
-		background-color: #050505a0;
-}
-
+  .footer {
+    background-color: #050505a0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+    pointer-events: none; /* Evita que el footer sea interactivo cuando está oculto */
+  }
+  .footer.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto; /* Habilita la interactividad cuando el footer es visible */
+  }
+  .footer {
+      background-color: #050505a0;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s, transform 0.5s;
+      pointer-events: none; /* Evita que el footer sea interactivo cuando está oculto */
+    }
+    .footer.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto; /* Habilita la interactividad cuando el footer es visible */
+    }
 </style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const footer = document.querySelector('.footer');
+      const currentYear = new Date().getFullYear();
+
+      function checkScroll() {
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+          footer.classList.add('visible');
+        } else {
+          footer.classList.remove('visible');
+        }
+      }
+
+      window.addEventListener('scroll', checkScroll);
+      window.addEventListener('resize', checkScroll);
+      checkScroll(); // Initial check in case the page is already scrolled to the bottom
+    });
+  </script>
+  

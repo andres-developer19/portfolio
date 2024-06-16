@@ -6,14 +6,16 @@ import SocialPill from '../socialPill/SocialPill.astro'
 import YoutubeIcon from '../icons/Youtube.astro'
 import MailIcon from '../icons/Mail.astro'
 import SectionContainer from '../sectionContainer/SectionContainer.astro'
+
+const tel = 1123914307
 ---
 
-<SectionContainer class="flex gap-x-8 justify-center items-start pb-0">
+<SectionContainer class="flex flex-col md:flex-row gap-x-8 justify-center items-center md-items-start pb-0">
 
-    <div class="[&>p]:mb-4 [&>p>strong]:text-yellow-400  w-2/5" >
-        <ul class=" flex flex-col gap-8 [&>li]:inline-flex">
+    <div class="[&>p]:mb-4 [&>p>strong]:text-yellow-400  w-full md:w-2/5 mb-10 md:mb-0" >
+        <ul class="flex flex-col gap-8 [&>li]:inline-flex">
             <li>                
-                <SocialPill>
+                <SocialPill href=`tel:+54${tel}`>
                     <PhoneIcon 
                     class="size-4 lg:size-5" />
                     +54 11-2391-4307
@@ -49,7 +51,7 @@ import SectionContainer from '../sectionContainer/SectionContainer.astro'
             </li>
         </ul>
     </div>
-    <div class="imageProfileAbout w-3/5">
+    <div class="imageProfileAbout w-full md:w-3/5">
         
 <form class="max-w-sm mx-auto">
     

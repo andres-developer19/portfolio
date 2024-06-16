@@ -176,14 +176,17 @@ PROJECTS.map(({tags}) => (
 ))
 ---
 
-<section class="flex flex-col gap-y-16">
+<section class="flex flex-row gap-y-16 gap-x-5 flex-wrap justify-center md:justify-between">
   {
     PROJECTS.map(({ image, title, description, tags, link, github }) => (
-      <article>
+      <article class="max-w-sm flex flex-col justify-between h-[540px]">
+        <div class="text-project">
         <h3 class="text-2xl font-semibold text-yellow-800 dark:text-yellow-200 mb-2">
           {title}
         </h3>
         <p class="text-lg mb-4 text-pretty">{description}</p>
+      </div>
+      <div class="media-project">
         <ul class="flex gap-x-2 flex-row mb-2">
           {tags.map((tag) => (
             <li>
@@ -196,12 +199,14 @@ PROJECTS.map(({tags}) => (
             </li>
           ))}
         </ul>
+        <figure class="img-project">
         <img
           loading="lazy"
-          class="rounded shadow-2xl shadow-white/10 aspect-video object-cover"
+          class="rounded shadow-2xl shadow-white/10 aspect-video object-cover imgProject"
           src={image}
           alt={`Captura de pantalla del proyecto ${image}`}
         />
+        </figure>
         <footer class="flex gap-x-4 items-end justify-start mt-4">
           {github && (
             <LinkButton href={github}>
@@ -214,7 +219,31 @@ PROJECTS.map(({tags}) => (
             Ir al sitio web
           </LinkButton>
         </footer>
+        </div>
       </article>
     ))
   }
 </section>
+
+<style>
+  .img-project {
+    overflow: hidden; /* Asegura que la imagen no se salga de la caja al escalar */
+    display: inline-block; /* Asegura que el figure no se expanda más de lo necesario */
+  }
+
+  .imgProject {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añade una transición suave */
+    display: block; /* Asegura que la imagen ocupe todo el espacio dentro del figure */
+  }
+
+  .img-project:hover .imgProject {
+    transform: scale(1.1);
+  }
+  article:hover .img-project {
+    box-shadow: -6px 6px #FBFF00;
+    border-radius: 2px;
+  }
+  article:hover .imgProject {
+    transform: scale(1.1);
+  }
+</style>
