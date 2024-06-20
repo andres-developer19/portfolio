@@ -216,14 +216,8 @@ PROJECTS.map(({tags}) => (
 <section class="flex flex-row gap-y-16 gap-x-5 flex-wrap justify-center md:justify-between">
   {
     PROJECTS.map(({ image, title, description, tags, link, github }) => (
-      <article class="max-w-sm flex flex-col justify-between h-[540px]">
-        <div class="text-project">
-        <h3 class="text-2xl font-semibold text-yellow-800 dark:text-yellow-200 mb-2">
-          {title}
-        </h3>
-        <p class="text-lg mb-4 text-pretty">{description}</p>
-      </div>
-      <div class="media-project">
+      <article class="max-w-sm flex flex-col justify-between max-h-full h-full">
+      <div class="media-project card">
         <ul class="flex gap-x-2 flex-row mb-2">
           {tags.map((tag) => (
             <li>
@@ -236,15 +230,21 @@ PROJECTS.map(({tags}) => (
             </li>
           ))}
         </ul>
-        <figure class="img-project">
+        <figure class="img-project aspect-video h-[216px]">
         <img
           loading="lazy"
-          class="rounded shadow-2xl shadow-white/10 aspect-video object-cover imgProject"
+          class="rounded shadow-2xl shadow-white/10 aspect-video object-cover imgProject max-w-[380px] w-full h-[216px]"
           src={image}
           alt={`Captura de pantalla del proyecto ${image}`}
         />
         </figure>
-        <footer class="flex gap-x-4 items-end justify-start mt-4">
+        <div class="text-project p-[16px]">
+        <h3 class="text-2xl font-semibold text-yellow-800 dark:text-yellow-200 mb-2">
+          {title}
+        </h3>
+        <p class="text-lg mb-4 text-pretty">{description}</p>
+      </div>
+        <footer class="flex gap-x-4 items-end justify-start mt-auto">
           {github && (
             <LinkButton href={github}>
               <GitHub class="size-6" />
@@ -263,6 +263,12 @@ PROJECTS.map(({tags}) => (
 </section>
 
 <style>
+    .card {
+    display: flex;
+    flex-direction: column;
+    height:540px; /* Hace que todas las cards tengan la misma altura */
+  }
+
   .img-project {
     overflow: hidden; /* Asegura que la imagen no se salga de la caja al escalar */
     display: inline-block; /* Asegura que el figure no se expanda más de lo necesario */

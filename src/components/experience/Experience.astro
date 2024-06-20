@@ -45,12 +45,20 @@ const EXPERIENCE = [
 ]
 ---
 
-<ol class="relative border-s border-gray-200 dark:border-gray-700"> 
+<ol class="relative border-s border-gray-200 dark:border-gray-700 timeline"> 
 {
     EXPERIENCE.map(experience => (
-  <li class="mb-10 ms-4">
+  <li class="mb-10 ms-4 timeline-item">
     <ExperienceItem {...experience} />
   </li>
   )) 
 }            
 </ol>
+
+<style>
+  .timeline-item:hover .timeline-hover {
+    border: 2px solid #FBFF00;
+    background-color: rgba(128, 128, 128, 0.323);
+  }
+
+</style>
