@@ -9,6 +9,7 @@ import Wordpress from "../icons/Wordpress.astro"
 import WorldWeb from "../icons/WorldWeb.astro"
 import Hubspot from "../icons/Hubspot.astro"
 import LinkButton from "../linkButton/LinkButton.astro"
+import React from "../icons/React.astro"
 
 const TAGS = {
   NEXT: {
@@ -45,6 +46,11 @@ const TAGS = {
     name: "HubSpot",
     class: "bg-[#003159] text-white",
     icon: Hubspot,
+  },
+  REACT: {
+    name: "React",
+    class: "bg-[#61dafb] text-white",
+    icon: React,
   }
 }
 
@@ -78,6 +84,14 @@ const TAGS = {
   */
 
 const PROJECTS = [
+ {
+    title: "Tic-Tac-Toe",
+    description:
+      "Juego del Tic Tac toe desarrollado con React",
+    link: "https://tictactoe-liard-omega.vercel.app/",
+    image: "./projects/bg-tictactoe.png",
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.REACT],
+  },
  {
     title: "Adriana Leal",
     description:
