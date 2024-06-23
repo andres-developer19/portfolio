@@ -10,6 +10,7 @@ import WorldWeb from "../icons/WorldWeb.astro"
 import Hubspot from "../icons/Hubspot.astro"
 import LinkButton from "../linkButton/LinkButton.astro"
 import React from "../icons/React.astro"
+import AstroIcon from "../icons/Astro.astro"
 
 const TAGS = {
   NEXT: {
@@ -51,6 +52,11 @@ const TAGS = {
     name: "React",
     class: "bg-[#018eb5] text-white",
     icon: React,
+  },
+  ASTRO: {
+    name: "Astro",
+    class: "bg-[#13151a] text-white",
+    icon: AstroIcon,
   }
 }
 
@@ -84,6 +90,14 @@ const TAGS = {
   */
 
 const PROJECTS = [
+  {
+    title: "Rick and Morty",
+    description: "Página que consume la API de Rick and Morty para mostrar personajes y permite filtrarlos por género, especie y estado. Demuestra habilidades en consumo de APIs y desarrollo web interactivo.",
+    link: "https://rick-and-morty-mauve-omega.vercel.app/",
+    image: "./projects/bg-rick-morty.png",
+    tags: [TAGS.JAVASCRIPT, TAGS.ASTRO],
+    github: "https://github.com/andres-developer19/rick-and-morty",
+  },
  {
     title: "Tic-Tac-Toe",
     description:
@@ -222,7 +236,7 @@ const PROJECTS = [
     image: "./projects/criptomoon.webp",
     tags: [TAGS.HTML, TAGS.CSS],
   },
-  {}
+  {},
 ]
 PROJECTS.map(({tags}) => (
   console.log(tags)
@@ -235,11 +249,9 @@ PROJECTS.map(({tags}) => (
       <article class="max-w-sm flex flex-col justify-between max-h-full h-full">
       <div class="media-project card">
         <ul class="flex gap-x-2 flex-row mb-2">
-          {tags.map((tag) => (
-            <li>
-              <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
-              >
+          {tags && tags.map((tag) => (
+            <li >
+              <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
                 <tag.icon class="size-4" />
                 {tag.name}
               </span>
