@@ -11,6 +11,7 @@ import Hubspot from "../icons/Hubspot.astro"
 import LinkButton from "../linkButton/LinkButton.astro"
 import React from "../icons/React.astro"
 import AstroIcon from "../icons/Astro.astro"
+import Typescript from "../icons/Typescript.astro"
 
 const TAGS = {
   NEXT: {
@@ -57,6 +58,11 @@ const TAGS = {
     name: "Astro",
     class: "bg-[#13151a] text-white",
     icon: AstroIcon,
+  },
+  TYPESCRIPT: {
+    name: "Astro",
+    class: "bg-[#13151a] text-white",
+    icon: Typescript,
   }
 }
 
@@ -106,6 +112,24 @@ const PROJECTS = [
     image: "./projects/bg-tictactoe.png",
     github: "https://github.com/andres-developer19/tictactoe",
     tags: [TAGS.JAVASCRIPT, TAGS.REACT],
+  },
+ {
+    title: "Menu con React",
+    description:
+      "este es un pequeño proyecto realizado con react.",
+    link: "https://menu-items-gilt.vercel.app/",
+    image: "./projects/x.png",
+    github: "https://github.com/andres-developer19/menuItems",
+    tags: [TAGS.JAVASCRIPT, TAGS.REACT],
+  },
+ {
+    title: "Lista de Libros con Next js",
+    description:
+      "listado dinamico de libros Proyecto realiazado con Nextjs",
+    link: "https://booklist-hsdl1udm0-andres-developer19.vercel.app/",
+    image: "./projects/bg-libros.png",
+    github: "https://github.com/andres-developer19/booklist",
+    tags: [TAGS.JAVASCRIPT, TAGS.NEXT, TAGS.TYPESCRIPT],
   },
  {
     title: "Adriana Leal",

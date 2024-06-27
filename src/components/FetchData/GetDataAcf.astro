@@ -1,0 +1,17 @@
+---
+
+const getData = await fetch(`https://www.happyagencies.com/wp-json/wp/v2/testimonial?acf_format=standard`)
+const data = await getData.json()
+console.log(data[0]);
+---
+
+<ul>
+    {
+        data.map((item) => (
+            <li>
+                <span>{item.id}</span>
+                <h2>{item.title.rendered}</h2>
+            </li>
+        ))
+    }
+</ul>
